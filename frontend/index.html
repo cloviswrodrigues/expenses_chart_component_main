@@ -8,36 +8,41 @@
   
   <title>Frontend Mentor | Expenses chart component</title>
 
-  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
-  <style>
-    .attribution { font-size: 11px; text-align: center; }
-    .attribution a { color: hsl(228, 45%, 44%); }
-  </style>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;700&display=swap" rel="stylesheet">
+  
+  <link rel="stylesheet" href="./styles/main.css">
 </head>
 <body>
-
-  My balance
-  $921.48
-
-  Spending - Last 7 days
-
-  mon
-  tue
-  wed
-  thu
-  fri
-  sat
-  sun
-
-  Total this month
-  $478.33
-
-  +2.4%
-  from last month
-  
+  <div class="container">
+    <div class="wrapper">
+      <div class="balance">
+        <span>My balance</span>
+        <p>$921.48</p>
+      </div>
+      <div class="logo">
+        <svg width="72" height="48" viewBox="0 0 72 48" xmlns="http://www.w3.org/2000/svg"><g fill="none" fill-rule="evenodd"><circle fill="#382314" cx="48" cy="24" r="24"/><circle stroke="#FFF" stroke-width="2" cx="24" cy="24" r="23"/></g></svg>
+      </div>
+    </div>
+    <div class="card">
+      <h1>Spending - Last 7 days</h1>
+      <div class="chart"></div>
+      <div class="information">
+        <div class="total">
+          <span>Total this month</span>
+          <p>$478.33</p>
+        </div>
+        <div class="percentage">
+          <p>+2.4%</p>
+          <span>from last month</span>
+        </div>
+      </div>
+    </div>
+  </div> 
   <div class="attribution">
-    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
-    Coded by <a href="#">Your Name Here</a>.
+    Challenge by <a href="https://www.frontendmentor.io/challenges/expenses-chart-component-e7yJBUdjwt" target="_blank">Frontend Mentor</a>. 
+    Coded by <a href="https://github.com/cloviswrodrigues" target="_blank">Clóvis Rodrigues</a>.
   </div>
 </body>
 </html>

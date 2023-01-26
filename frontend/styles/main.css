@@ -1,0 +1,76 @@
+:root {
+    --color-soft-red: hsl(10, 79%, 65%);
+    --color-cyan: hsl(186, 34%, 60%);
+    --color-dark-brown: hsl(25, 47%, 15%);
+    --color-medium-brown: hsl(28, 10%, 53%);
+    --color-cream: hsl(27, 66%, 92%);
+    --color-very-pale-orange: hsl(33, 100%, 98%);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-family: 'DM Sans', sans-serif;
+    font-size: 10px;
+    
+}
+
+body {
+    width: 100%;
+    height: 100vh;
+    background-color: var(--color-cream);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.container {
+    width: 100%;
+    max-width: 60rem;
+}
+
+.container .wrapper {
+    background-color: var(--color-soft-red);
+    border-radius: 20px;
+    padding: 3rem 3rem 2rem;
+    display: flex;
+    justify-content: space-between;
+}
+
+.container .wrapper .balance {
+    color: var(--color-very-pale-orange);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.container .wrapper .balance span {
+    font-size: 1.2rem;
+    font-weight: 400;
+}
+
+.container .wrapper .balance p {
+    font-size: 2.4rem;
+    font-weight: 700;
+}
+
+
+.attribution {
+    position: absolute;
+    bottom: 1rem;
+}
+
+.attribution a {
+    color: var(--color-soft-red);
+    text-decoration: none;
+    font-weight: 700;
+}
+
+.attribution a:hover {
+    text-decoration: underline;
+}

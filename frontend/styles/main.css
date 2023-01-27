@@ -27,6 +27,7 @@ body {
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    
 }
 
 .container {
@@ -40,6 +41,7 @@ body {
     padding: 3rem 3rem 2rem;
     display: flex;
     justify-content: space-between;
+    margin-bottom: 2rem;
 }
 
 .container .wrapper .balance {
@@ -58,6 +60,49 @@ body {
     font-size: 2.4rem;
     font-weight: 700;
 }
+
+.container .card {
+    background-color: var(--color-very-pale-orange);
+    border-radius: 20px;
+    padding: 3rem;
+}
+
+.container .card h1 {
+    font-size: 2.8rem;
+}
+
+.container .card .information {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    border-top: 1px solid var(--color-cream);
+    padding: 2rem 0;
+}
+
+.container .card .information .total span {
+    font-size: 1.2rem;
+    color: var(--color-medium-brown);
+    margin-bottom: 1rem;
+}
+
+.container .card .information .total p {
+    font-size: 4rem;
+    font-weight: 700;
+    color: var(--color-dark-brown);
+}
+
+.container .card .information .percentage p {
+    font-size: 1.6rem;
+    font-weight: 700;
+    color: var(--color-dark-brown);
+    text-align: right;
+}
+
+.container .card .information .percentage span {
+    font-size: 1.4rem;
+    color: var(--color-medium-brown);
+}
+
 
 
 .attribution {

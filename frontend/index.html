@@ -27,7 +27,9 @@
     </div>
     <div class="card">
       <h1>Spending - Last 7 days</h1>
-      <div class="chart"></div>
+      <div>
+        <canvas id="chart"></canvas>
+      </div>
       <div class="information">
         <div class="total">
           <span>Total this month</span>
@@ -45,4 +47,99 @@
     Coded by <a href="https://github.com/cloviswrodrigues" target="_blank">Clóvis Rodrigues</a>.
   </div>
 </body>
+<script src="https://cdn.jsdelivr.net/npm/chart.js@4.2"></script>
+  
+  <script>
+    const context = document.getElementById('chart');
+
+    dataJson = [
+      {
+        "label": "mon",
+        "data": 17.45
+      },
+      {
+        "label": "tue",
+        "data": 34.91
+      },
+      {
+        "label": "wed",
+        "data": 52.36
+      },
+      {
+        "label": "thu",
+        "data": 31.07
+      },
+      {
+        "label": "fri",
+        "data": 23.39
+      },
+      {
+        "label": "sat",
+        "data": 43.28
+      },
+      {
+        "label": "sun",
+        "data": 25.48
+      }
+    ]
+  
+    const chart = new Chart(context, {
+      type: 'bar',
+      data: {
+        labels: ['mon', 'tue', 'wed', 'thu', 'fri', 'sat', 'sun'],
+        datasets: [{
+          label: null,
+          data: dataJson.map((item) => item.data),
+          borderWidth: 1,
+          backgroundColor: ['hsl(10, 79%, 65%)'],
+          hoverBackgroundColor: 'hsl(186, 34%, 60%)',
+          borderRadius: [5],
+          borderSkipped: false,
+        }]
+      },
+      options: {
+        scales: {
+          x: {
+            grid: {
+              display: false,
+              drawOnChartArea: false,
+            },
+            border: {
+              display: false
+            }
+          },
+          y: {
+            grid: {
+              display: false,
+              drawOnChartArea: false,
+              drawTicks: false,
+              lineWidth: 0,
+            },
+            ticks: {
+              display: false,
+            },
+            border: {
+              display: false
+            }
+          },
+          
+        },
+        plugins: {
+          tooltip: {
+            backgroundColor: 'hsl(25, 47%, 15%)',
+            callbacks: {
+              label: (context) => {
+                console.log(context)
+                return '$'+context.formattedValue
+              }
+            }
+          }
+        }              
+      },
+    });
+
+    console.log('chart: ',chart.options.scales.x)
+    
+  </script>
+
 </html>

@@ -31,7 +31,7 @@ body {
 }
 
 .container {
-    width: 100%;
+    width: 90%;
     max-width: 60rem;
 }
 
@@ -120,4 +120,29 @@ body {
 
 .attribution a:hover {
     text-decoration: underline;
+}
+
+
+@media screen and (max-width: 900px) {
+    .container .wrapper {
+        border-radius: 10px;
+        padding: 2rem;
+    }
+
+    .container .card {
+        padding: 2rem;
+        border-radius: 10px;
+    }
+
+    .container .card h1 {
+        font-size: 2.2rem;
+    }
+
+    .container .card .information {
+        padding: 2rem 0 0;
+    }
+    
+    .container .card .information .total p {
+        font-size: 2.6rem;
+    }
 }

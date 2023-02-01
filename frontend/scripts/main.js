@@ -51,7 +51,7 @@ const chart = new Chart(context, {
     labels: ["mon", "tue", "wed", "thu", "fri", "sat", "sun"],
     datasets: [
       {
-        label: null,
+        label: "",
         data: dataJson.map((item) => item.data),
         borderWidth: 1,
         backgroundColor: ["hsl(10, 79%, 65%)"],
@@ -62,6 +62,9 @@ const chart = new Chart(context, {
     ],
   },
   options: {
+    layout: {
+      padding: 10,
+    },
     scales: {
       x: {
         grid: {
@@ -88,6 +91,15 @@ const chart = new Chart(context, {
       },
     },
     plugins: {
+      layout: {
+        padding: {
+          top: 10,
+          bottom: 10,
+        },
+      },
+      legend: {
+        display: false,
+      },
       tooltip: {
         backgroundColor: "hsl(25, 47%, 15%)",
         callbacks: {
@@ -98,6 +110,20 @@ const chart = new Chart(context, {
           labelPointStyle: (context) => "",
         },
         yAlign: "bottom",
+        displayColors: false,
+        padding: {
+          top: 10,
+          right: 10,
+          bottom: 8,
+          left: 8,
+        },
+        caretSize: 0,
+        caretPadding: 8,
+        bodyFont: {
+          family: "'DM Sans', 'sans-serif'",
+          weight: "bold",
+          size: 18,
+        },
       },
     },
   },

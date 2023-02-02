@@ -77,8 +77,8 @@ const chart = new Chart(context, {
     layout: {
       padding: {
         top: 20,
-        right: 0,
-        left: 0,
+        right: 20,
+        left: 10,
       },
     },
     scales: {

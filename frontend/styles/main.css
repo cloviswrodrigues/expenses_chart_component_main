@@ -72,6 +72,11 @@ body {
     margin-bottom: 2rem;
 }
 
+.container .card .dashboard {
+    height: 300px;
+}
+
+
 .container .card .information {
     display: flex;
     justify-content: space-between;
@@ -136,6 +141,10 @@ body {
 
     .container .card h1 {
         font-size: 2.2rem;
+    }
+
+    .container .card .dashboard {
+        height: 200px;
     }
 
     .container .card .information {

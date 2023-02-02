@@ -141,5 +141,3 @@ const chart = new Chart(context, {
     },
   },
 });
-
-console.log("chart: ", chart.data.datasets);
